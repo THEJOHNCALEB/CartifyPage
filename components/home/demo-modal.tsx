@@ -19,7 +19,7 @@ const DemoModal = ({
     <Modal showModal={showDemoModal} setShowModal={setShowDemoModal}>
       <div className="w-full overflow-hidden md:max-w-md md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
-          <a href="https://precedent.dev">
+          <a href="https://usecartify.vercel.app">
             <ShoppingCart className="h-10 w-10" />
           </a>
           <h3 className="font-display text-2xl font-bold">Cartify</h3>

@@ -3,14 +3,15 @@
 import { useState } from "react";
 import { useDemoModal } from "@/components/home/demo-modal";
 import Popover from "@/components/shared/popover";
-import Tooltip from "@/components/shared/tooltip";
-import { AppleIcon, ChevronDown, Download, DownloadCloudIcon, DownloadIcon, PlayIcon } from "lucide-react";
+import { DownloadIcon, MailOpen } from "lucide-react";
+import { useSignInModal } from "../layout/sign-in-modal";
 
 export default function ComponentGrid() {
+  const { SignInModal, setShowSignInModal } = useSignInModal();
   const { DemoModal, setShowDemoModal } = useDemoModal();
   const [openPopover, setOpenPopover] = useState(false);
   return (
-    <div className="">
+    <>
     
       <Popover
         content={
@@ -31,7 +32,7 @@ export default function ComponentGrid() {
       >
         <button
           onClick={() => setOpenPopover(!openPopover)}
-          className="flex w-46 items-center justify-between border border-gray-300 px-4 py-2 transition-all duration-75 hover:border-gray-800 rounded-3xl focus:outline-none active:bg-gray-100"
+          className="flex w-46 items-center justify-between border border-gray-300 px-5 py-3 transition-all duration-75 hover:border-gray-800 rounded-3xl focus:outline-none active:bg-gray-100"
         >
           <p className="text-gray-600 mx-2">Download App {" "}</p>
           <DownloadIcon
@@ -40,6 +41,16 @@ export default function ComponentGrid() {
           />
         </button>
       </Popover>
-    </div>
+      <DemoModal />
+        <button     
+          onClick={() => setShowDemoModal(true)}     
+          className="flex w-46 items-center justify-between border text-slate-200 border-gray-300 px-5 py-3 transition-all duration-75 bg-black opacity-80 rounded-full focus:outline-none active:bg-gray-100"
+        >
+          <MailOpen
+            className={`h-4 w-4 text-slate-50 transition-all`}
+          />
+          <p className=" mx-2">Mailing List {" "}</p>
+        </button>
+    </>
   );
 }

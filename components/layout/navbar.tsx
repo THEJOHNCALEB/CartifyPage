@@ -17,16 +17,16 @@ export default function NavBar() {
     <>
       <SignInModal />
       <div
-        className={`fixed top-0 w-full flex justify-center ${
+        className={`fixed top-0 w-full flex justify-center py-4 ${
           scrolled
             ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
             : "bg-white/0"
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
-          <Link href="/" className="flex items-center font-display text-2xl">
-            <ShoppingCart className="h-9 w-9" />
-            <p className="px-2">{" "}Cartify </p>
+          <Link href="/" className="flex items-center text-3xl">
+            <p className="px-2 font-mono font-extrabold">{" "}Cartify </p>
+          
           </Link>
               <DemoModal />
           <div className="flex flex-row justify-around gap-6">          

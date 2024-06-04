@@ -2,7 +2,7 @@ import { BuyMeACoffee } from "../shared/icons";
 
 export default function Footer() {
   return (
-    <div className="absolute w-full py-5 gap-5 text-center">
+    <div className="absolute w-full py-5 mb-2 gap-5 text-center">
       
       <a
         href="https://www.buymeacoffee.com/thejohncaleb"

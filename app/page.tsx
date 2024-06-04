@@ -4,6 +4,8 @@ import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
+import { MailOpen } from "lucide-react";
+import Faq from "@/components/home/faq";
 
 
 export default async function Home() {
@@ -54,25 +56,29 @@ export default async function Home() {
          
         >          
           <ComponentGrid />
+         
         </div>
       </div>
-      {/* <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            demo={
-              title === "Beautiful, reusable components" ? (
-                <ComponentGrid />
-              ) : (
-                demo
-              )
-            }
-            large={large}
-          />
-        ))}
-      </div> */}
+      <div className="container my-10 opacity-95 w-full max-w-screen-xl flex-1 justify-center gap-5 px-5 xl:px-0">
+        <div className=''>
+      <div className='flex justify-center items-center'>
+        <div className='p-10 bg-slate-50 border border-stone-300 rounded-3xl max-w-5xl flex items-center self-center'>
+          <div className='flex sm:flex-row-reverse flex-col justify-around w-full'>
+          <Image src="/cartifyhero.png" alt="Cartify" height={500} width={500} />
+        
+            <div className='sm:w-1/2 w-full'>
+              <h2 className='sm:text-6xl text-3xl font-light text-stone-900'>
+                Effortlessly manage your shopping lists, stay organized, and
+                save time with <span className='font-bold'> Cartify.</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <Faq />
+   
     </>
   );
 }
