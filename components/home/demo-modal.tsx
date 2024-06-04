@@ -6,7 +6,7 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import Image from "next/image";
+import { ShoppingCart } from "lucide-react";
 
 const DemoModal = ({
   showDemoModal,
@@ -20,19 +20,20 @@ const DemoModal = ({
       <div className="w-full overflow-hidden md:max-w-md md:rounded-2xl md:border md:border-gray-100 md:shadow-xl">
         <div className="flex flex-col items-center justify-center space-y-3 bg-white px-4 py-6 pt-8 text-center md:px-16">
           <a href="https://precedent.dev">
-            <Image
-              src="/logo.png"
-              alt="Precedent Logo"
-              className="h-10 w-10 rounded-full"
-              width={20}
-              height={20}
-            />
+            <ShoppingCart className="h-10 w-10" />
           </a>
-          <h3 className="font-display text-2xl font-bold">Precedent</h3>
+          <h3 className="font-display text-2xl font-bold">Cartify</h3>
           <p className="text-sm text-gray-500">
-            Precedent is an opinionated collection of components, hooks, and
-            utilities for your Next.js project.
+            Join the waitlist to get early access to Cartify.
           </p>
+          <form className="w-full max-w-sm">
+  <div className="flex items-center border-b border-teal-500 py-2">
+    <input className="appearance-none bg-transparent border-transparent w-full h-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-gray-100 focus:border-slate-50" type="email" placeholder="John@gmail.com" aria-label="Email"/>
+    <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded focus:border-none" type="button">
+      Let's Go
+    </button>
+  </div>
+</form>
         </div>
       </div>
     </Modal>

@@ -1,12 +1,16 @@
 "use client";
 
+import { useDemoModal } from "@/components/home/demo-modal";
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
 import { useSignInModal } from "./sign-in-modal";
+import { GithubIcon, LucideGithub, MailCheck, RocketIcon, RockingChairIcon, ShoppingCart } from "lucide-react";
+import { Github } from "../shared/icons";
 
 export default function NavBar() {
   const { SignInModal, setShowSignInModal } = useSignInModal();
+  const { DemoModal, setShowDemoModal } = useDemoModal();
   const scrolled = useScroll(50);
 
   return (
@@ -21,22 +25,19 @@ export default function NavBar() {
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
           <Link href="/" className="flex items-center font-display text-2xl">
-            <Image
-              src="/logo.png"
-              alt="Cartify logo"
-              width="30"
-              height="30"
-              className="mr-2 rounded-sm"
-            ></Image>
-            <p>Cartify</p>
+            <ShoppingCart className="h-9 w-9" />
+            <p className="px-2">{" "}Cartify </p>
           </Link>
-          <div>          
-              <button
-                className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-                onClick={() => setShowSignInModal(true)}
-              >
-                Sign In
-              </button>
+              <DemoModal />
+          <div className="flex flex-row justify-around gap-6">          
+              
+      <Link href="/"
+        onClick={() => setShowDemoModal(true)}
+        className="text-black"
+      >
+       <RocketIcon className="h-10 w-10" />
+        </Link>
+        <a href="https://github.com/thejohncaleb"><LucideGithub className="h-11 p-1 w-11" /></a>
           </div>
         </div>
       </div>
