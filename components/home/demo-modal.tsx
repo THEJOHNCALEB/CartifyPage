@@ -28,9 +28,9 @@ const DemoModal = ({
           </p>
           <form className="w-full max-w-sm">
   <div className="flex items-center border-b border-teal-500 py-2">
-    <input className="appearance-none bg-transparent border-transparent w-full h-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-gray-100 focus:border-slate-50" type="email" placeholder="John@gmail.com" aria-label="Email"/>
-    <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded focus:border-none" type="button">
-      Join
+    <input className="appearance-none bg-transparent border-transparent w-full h-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-gray-100 focus:border-slate-50 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0" type="email" placeholder="your-email@domain.com" aria-label="Email"/>
+    <button className="flex-shrink-0 bg-stone-800 hover:bg-stone-700 border-stone-800 hover:border-stone-700 text-sm border-4 text-white py-1 px-2 rounded focus:border-none" type="button">
+      Submit
     </button>
   </div>
 </form>

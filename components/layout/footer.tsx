@@ -1,3 +1,4 @@
+import { VibrateIcon } from "lucide-react";
 import { BuyMeACoffee } from "../shared/icons";
 
 export default function Footer() {
@@ -14,7 +15,7 @@ export default function Footer() {
         <p className="font-medium text-gray-600">Buy me a coffee</p>
       </a>
       <p className="text-gray-500 mb-3">
-      Made with ❤ From {" "}
+      Made with ❤ By {" "}
         <a
           className="font-semibold text-gray-600 underline transition-colors hover:no-underline"
           href="https://twitter.com/thejohncaleb"

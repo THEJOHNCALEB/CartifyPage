@@ -4,38 +4,23 @@ import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
-import { MailOpen } from "lucide-react";
+import { AlignRight, ArrowRight, ArrowRightIcon, CarrotIcon, ChevronRight, MailOpen } from "lucide-react";
 import Faq from "@/components/home/faq";
 
 
 export default async function Home() {
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/precedent",
-    {
-      ...(process.env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-      // data will revalidate every 24 hours
-      next: { revalidate: 86400 },
-    },
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e));
 
   return (
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
-        href="https://twitter.com/thejohncaleb"
+          href="https://twitter.com/thejohncaleb"
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-stone-900 px-7 py-2 transition-colors hover:bg-stone-700"
         >
-          <Twitter className="h-5 w-5 text-[#1d9bf0]" />
-          <p className="text-sm font-semibold text-[#1d9bf0]">
+          <Twitter className="h-5 w-5 text-stone-200" />
+          <p className="text-sm font-semibold underline text-stone-200">
             Introducing Cartify
           </p>
         </a>
@@ -49,7 +34,7 @@ export default async function Home() {
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          Effortlessly manage your shopping lists, stay organized, and save time with <strong>Cartify</strong>.
+          Experience the future of shopping with <strong>Cartify</strong>, the ultimate app for managing your shopping lists. 
         </p>
         <div
           className="mx-auto mt-6 flex items-center justify-center space-x-5"
@@ -65,11 +50,11 @@ export default async function Home() {
         <div className='p-10 bg-slate-50 border border-stone-300 rounded-3xl max-w-5xl flex items-center self-center'>
           <div className='flex sm:flex-row-reverse flex-col justify-around w-full'>
           <Image src="/cartifyhero.png" alt="Cartify" height={500} width={500} />
-        
-            <div className='sm:w-1/2 w-full'>
-              <h2 className='sm:text-6xl text-3xl font-light text-stone-900'>
+        <div className="sm:border-t-0 sm:mt-0 border-t-2 mt-8"></div>
+            <div className='sm:w-1/2 w-full sm:pt-0 pt-7'>
+              <h2 className='sm:text-6xl sm:text-left text-center text-3xl font-light text-stone-900'>
                 Effortlessly manage your shopping lists, stay organized, and
-                save time with <span className='font-bold'> Cartify.</span>
+                save time with <span className='font-bold'> Cartify.</span> 
               </h2>
             </div>
           </div>
@@ -78,7 +63,7 @@ export default async function Home() {
     </div>
       </div>
       <Faq />
-   
+    
     </>
   );
 }

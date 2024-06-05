@@ -4,18 +4,15 @@ import { useDemoModal } from "@/components/home/demo-modal";
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
-import { useSignInModal } from "./sign-in-modal";
 import { GithubIcon, LucideGithub, MailCheck, RocketIcon, RockingChairIcon, ShoppingCart } from "lucide-react";
 import { Github } from "../shared/icons";
 
 export default function NavBar() {
-  const { SignInModal, setShowSignInModal } = useSignInModal();
   const { DemoModal, setShowDemoModal } = useDemoModal();
   const scrolled = useScroll(50);
 
   return (
     <>
-      <SignInModal />
       <div
         className={`fixed top-0 w-full flex justify-center py-4 ${
           scrolled
