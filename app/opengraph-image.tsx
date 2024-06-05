@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Precedent - Building blocks for your Next.js project";
+export const alt = "Cartify - AI Powered Shopping List App";
 export const contentType = "image/png";
 
 export default async function OG() {
@@ -26,8 +26,8 @@ export default async function OG() {
         }}
       >
         <img
-          src={`https://${process.env.VERCEL_URL || "precedent.dev"}/logo.png`}
-          alt="Precedent Logo"
+          src={`https://usecartify.vercel.app"}/logo.png`}
+          alt="Cartify Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
         <h1
@@ -42,7 +42,7 @@ export default async function OG() {
             letterSpacing: "-0.02em",
           }}
         >
-          Precedent
+          Cartify
         </h1>
       </div>
     ),
