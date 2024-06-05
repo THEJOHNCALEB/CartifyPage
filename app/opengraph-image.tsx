@@ -26,7 +26,7 @@ export default async function OG() {
         }}
       >
         <img
-          src={`https://usecartify.vercel.app"}/logo.png`}
+          src={`https://usecartify.vercel.app"}/media/logo.png`}
           alt="Cartify Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />

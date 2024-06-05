@@ -15,12 +15,12 @@ export const metadata = {
     siteName: 'Cartify',
     images: [
       {
-        url: 'https://usecartify.vercel.app/logo.png', // Must be an absolute URL
+        url: 'https://usecartify.vercel.app/media/logo.png', // Must be an absolute URL
         width: 800,
         height: 600,
       },
       {
-        url: 'https://usecartify.vercel.app/logo.png', // Must be an absolute URL
+        url: 'https://usecartify.vercel.app/media/logo.png', // Must be an absolute URL
         width: 1800,
         height: 1600,
         alt: 'Cartify',
