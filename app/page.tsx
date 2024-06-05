@@ -17,10 +17,10 @@ export default async function Home() {
           href="https://twitter.com/thejohncaleb"
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-stone-900 px-7 py-2 transition-colors hover:bg-stone-700"
+          className="mx-auto mb-6 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-stone-900 px-7 py-2 transition-colors hover:bg-stone-700"
         >
           <Twitter className="h-5 w-5 text-stone-200" />
-          <p className="text-sm font-semibold underline text-stone-200">
+          <p className="text-xs font-semibold underline text-stone-200">
             Introducing Cartify
           </p>
         </a>

@@ -5,12 +5,14 @@ import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
+import fav from "@/app/favicon.ico"
 
 export const metadata = {
   title: "Cartify - AI Powered Shopping List App",
   description:
     "AI Powered Shopping List App - Cartify",
   metadataBase: new URL("https://usecartify.vercel.app"),
+  ogImageUrl: fav
 };
 
 export default async function RootLayout({
