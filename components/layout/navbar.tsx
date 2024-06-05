@@ -21,7 +21,7 @@ export default function NavBar() {
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
-          <Link href="/" className="flex items-center text-3xl">
+          <Link href="/" className="flex items-center text-2xl sm:text-3xl">
             <p className="px-2 font-mono font-extrabold">{" "}Cartify </p>
           
           </Link>
@@ -32,7 +32,7 @@ export default function NavBar() {
         onClick={() => setShowDemoModal(true)}
         className="text-black"
       >
-       <RocketIcon className="h-10 w-10" />
+       <RocketIcon className="h-10 w-10 sm:block hidden" />
         </Link>
         <a href="https://github.com/thejohncaleb"><LucideGithub className="h-11 p-1 w-11" /></a>
           </div>

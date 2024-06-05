@@ -8,12 +8,28 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import fav from "@/app/favicon.ico"
 
 export const metadata = {
-  title: "Cartify - AI Powered Shopping List App",
-  description:
-    "AI Powered Shopping List App - Cartify",
-  metadataBase: new URL("https://usecartify.vercel.app"),
-  ogImageUrl: fav
-};
+  openGraph: {
+    title: 'Cartify - AI Powered Shopping List App',
+    description: 'AI Powered Shopping List App By John',
+    url: 'https://usecartify.vercel.app',
+    siteName: 'Next.js',
+    images: [
+      {
+        url: 'https://usecartify.vercel.app/Images/preview.png', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://usecartify.vercel.app/Images/preview.png', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'Cartify',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
 export default async function RootLayout({
   children,
