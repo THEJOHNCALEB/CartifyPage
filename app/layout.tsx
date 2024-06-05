@@ -5,8 +5,7 @@ import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import fav from "@/app/logo.png"
-import Head from "next/head";
+import ogImage from './Images/logo.png'
 
 export const metadata = {
   openGraph: {
@@ -16,19 +15,20 @@ export const metadata = {
     siteName: 'Cartify',
     images: [
       {
-        url: 'https://usecartify.vercel.app/media/logo.png', // Must be an absolute URL
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://usecartify.vercel.app/media/logo.png', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'Cartify',
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+  },
+  twitter: {
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height
+      },
+    ]
   },
 }
 
@@ -39,9 +39,6 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-      <meta property="og:image" content="https://usecartify.vercel.app/media/logo.png" />
-      </Head>
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
         <Suspense fallback="...">
