@@ -6,6 +6,7 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import fav from "@/app/logo.png"
+import Head from "next/head";
 
 export const metadata = {
   openGraph: {
@@ -38,6 +39,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+      <meta property="og:image" content="https://usecartify.vercel.app/media/logo.png" />
+      </Head>
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
         <Suspense fallback="...">
