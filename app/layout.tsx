@@ -9,11 +9,11 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 export const metadata = {
   title: "Cartify - AI Powered Shopping List App",
   description:
-    "Cartify - AI Powered Shopping List App By John Caleb",
+    "Cartify - AI Powered Shopping List App By John Caleb - Effortlessly manage your shopping lists, stay organized, and save time with Cartify",
   metadataBase: new URL("https://usecartify.vercel.app"),
   twitter: {
     card: "summary_large_image",
-    
+    image: "https://usecartify.vercel.app/media/logo.png",
   }
 };
 
