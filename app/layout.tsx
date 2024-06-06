@@ -5,32 +5,13 @@ import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import ogImage from './Images/logo.png'
 
 export const metadata = {
-  openGraph: {
-    title: 'Cartify - AI Powered Shopping List App',
-    description: 'Experience the future of shopping with Cartify, the ultimate app for managing your shopping lists.',
-    url: 'https://usecartify.vercel.app',
-    siteName: 'Cartify',
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height
-      },
-    ],
-  },
-  twitter: {
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height
-      },
-    ]
-  },
-}
+  title: "Cartify - AI Powered Shopping List App",
+  description:
+    "AI Powered Shopping List App - Cartify",
+  metadataBase: new URL("https://usecartify.vercel.app"),
+};
 
 export default async function RootLayout({
   children,
