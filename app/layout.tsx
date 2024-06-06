@@ -11,6 +11,9 @@ export const metadata = {
   description:
     "AI Powered Shopping List App - Cartify",
   metadataBase: new URL("https://usecartify.vercel.app"),
+  twitter: {
+    card: "summary_large_image"
+  }
 };
 
 export default async function RootLayout({
