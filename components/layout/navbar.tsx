@@ -22,8 +22,8 @@ export default function NavBar() {
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
           <Link href="/" className="flex items-center text-2xl sm:text-3xl">
-            <p className="px-2 font-mono font-extrabold">{" "}Cartify </p>
-          
+          <Image src="/honelogo.png" alt="Cartify" height={150} width={150} />
+        
           </Link>
               <DemoModal />
           <div className="flex flex-row justify-around gap-6">          

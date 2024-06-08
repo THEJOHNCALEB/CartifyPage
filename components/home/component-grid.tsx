@@ -47,7 +47,7 @@ export default function ComponentGrid() {
           <MailOpen
             className={`h-4 w-4 text-stone-700 transition-all`}
           />
-          <p className="mx-2">Mailing List {" "}</p>
+          <p className="mx-2">Join Waitlist {" "}</p>
         </button>
     </>
   );

@@ -54,7 +54,7 @@ export default async function Home() {
             <div className='sm:w-1/2 w-full sm:pt-0 pt-7'>
               <h2 className='sm:text-6xl sm:text-left text-center text-3xl font-light text-stone-900'>
                 Effortlessly manage your shopping lists, stay organized, and
-                save time with <span className='font-bold'> Cartify.</span> 
+                save time with <strong className="font-bold">cartify.</strong>
               </h2>
             </div>
           </div>
