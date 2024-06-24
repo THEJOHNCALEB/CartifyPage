@@ -1,10 +1,10 @@
 <a href="https://usecartify.vercel.app/">
   <img alt="Cartify – AI Powered Shopping List App" src="https://usecartify.vercel.app/opengraph-image.png" />
-  <h1 align="center">Cartfiy</h1>
+  <h1 align="center">Cartify</h1>
 </a>
 
 <p align="center">
-  AI Powered Shopping List App
+  `AI Powered Shopping List App`
 </p>
 
 <p align="center">
